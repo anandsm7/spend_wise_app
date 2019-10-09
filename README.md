@@ -27,10 +27,7 @@ AI based web application for visualizing and categorizing user daily spendings.
 
 ​
 
-<br/><br/>
-
-​
-
+<br/>
 ##### Web Framework - Flask 
 
 ##### Data Base - postgres 
@@ -39,12 +36,8 @@ AI based web application for visualizing and categorizing user daily spendings.
 
 ##### Cloud - Heroku
 
-​
 
-<br/><br/>
-
-​
-
+<br/>
 check: https://spend-well.herokuapp.com
 
    
