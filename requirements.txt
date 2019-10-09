@@ -14,7 +14,7 @@ Flask-SSLify==0.1.5
 importlib-metadata==0.19
 itsdangerous==1.1.0
 pyOpenSSL==19.0.0
-gunicorn==19.0.0
+gunicorn==19.5.0
 Jinja2==2.10.1
 joblib==0.13.2
 kiwisolver==1.1.0
