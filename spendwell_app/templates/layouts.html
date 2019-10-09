@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>SpendWise</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <!-- main css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    {% if title %}
+        <title>Spend Wise - {{ title }}</title>
+    {% else %}
+        <title>Spend Wise</title>
+    {% endif %}
+</head>
+<body>
+
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+        <div class="container">
+          <a class="navbar-brand mr-4" href="/home"><img class="rounded-circle" src="{{ url_for('static',filename = 'default_w.jpg') }}" alt="Logo" style="width:60px;"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              {% if current_user.is_authenticated %}
+                <a class="nav-item nav-link" href="{{ url_for('user_log') }}">Expense Log</a>
+                <a class="nav-item nav-link" href="{{ url_for('insight') }}">Insights</a>
+                <a class="nav-item nav-link" href="{{ url_for('recomnd') }}">Chat</a>
+              {% else %}
+                <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+                <a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
+              {% endif %}
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+              {% if current_user.is_authenticated %}
+                <a class="nav-item nav-link" href="{{ url_for('account') }}">Account</a>
+                <a class = "nav-item nav-link" data-toggle="tooltip" data-placement="bottom" title="Logout!" class="red-tooltip" href = "{{ url_for('logout') }}"><img class="rounded-circle" src="{{ url_for('static',filename = current_user.image_file) }}" alt="Logo" style="width:40px;"></a>
+              {% else %}
+                <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+                <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    {% if request.path == url_for('home') %}
+    <section class="banner-area d-flex align-items-center" style = "background-image: url(/static/home-image.png)">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-6 col-xl-5">
+                    <h1>Spend Wise</h1><br>
+                    <h3>We care about how you spend</h3>
+                    <p>A perfect place to take care of all your financial transactions using AI based solutions.
+                    We provide with all the analytical information regarding your financial transactions</p>
+                    <a href="{{ url_for('login') }}" class="main_btn">Login</a>
+                    <a href="{{ url_for('register') }}" class="main_btn_light">Not a member yet</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    {% if request.path == url_for('about') %}
+    <section class="banner-area d-flex align-items-center" style = "background-image: url(/static/about.png)">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-lg-6 col-xl-5">
+                    <h1>Spend Wise</h1><br>
+                    <p>1. Create an account<br>
+                    2. Add you everyday finance Logs<br>
+                    3. Check for Financial Insights and Analytics<br>
+                    4. See you recommendations
+                    </p>
+                    <a href="{{ url_for('login') }}" class="main_btn">Login</a>
+                    <a href="{{ url_for('register') }}" class="main_btn_light">Not a member yet</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    {% if request.path == url_for('recomnd') %}
+    <section class="banner-area d-flex align-items-center">
+        <div class="container">
+            <h3>
+            <img src="{{ url_for('static', filename='s_bot.png') }}"
+            alt="Spend-Bot"
+            style="width:120px;height:120px;"/>Spend Bot - AI Assistant ❤️.
+            </h3>
+            <div class="row">
+                <div class="col-md-3 col-lg-6 col-xl-9">
+                 <head>
+                    <link
+                      rel="shortcut icon"
+                      type="image/x-icon"
+                      href="{{ url_for('static', filename='s_bot.png') }}"/>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                    <style>
+                        th {
+                            background-color: #4CAF50;
+                            color: white;
+                            }
+                        tr {
+                            color: white;
+                            }
+                      h1 {
+                        background-color: #ffffff;
+                        display: inline-block;
+                        font-size: 20px;
+                        color: #000000
+                        margin: left;
+                        text-align: left;
+                        padding: 14px;
+                      }
+                      h3 {
+                        color: black;
+                        font-size: 20px;
+                        margin-top: 3px;
+                        text-align: left;
+                      }
+                      #chatbox {
+                        margin : left;
+                        width: 90%;
+                        margin-top: 40px;
+                      }
+                      #userInput {
+                        margin : left;
+                        width: 90%;
+                        margin-top: 80px;
+                      }
+                      #textInput {
+                        width: 90%;
+                        border: none;
+                        border-bottom: 3px solid black;
+                        font-size: 17px;
+                      }
+                      .userText {
+                        color: white;
+                        font-size: 17px;
+                        text-align: right;
+                        line-height: 30px;
+                      }
+                      .userText span {
+                        background-color: #1ab394;
+                        padding: 10px;
+                        border-radius: 2px;
+                      }
+                      .botText {
+                        color: white;
+                        font-size: 17px;
+                        text-align: left;
+                        line-height: 30px;
+                      }
+                      .botText span {
+                        background-color: #3071a9;
+                        padding: 10px;
+                        border-radius: 2px;
+                      }
+                      #tidbit {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 300px;
+                      }
+                      .boxed {
+                        margin:left
+                        width: 78%;
+                        margin-top: 60px;
+                      }
+                      .box {
+                        border: 2px solid white;
+                      }
+                    </style>
+                  </head>
+                  <body>
+                    <div class="box"></div>
+                    <div class="boxed">
+                      <div>
+                        <div id="chatbox">
+                          <p class="botText">
+                            <span>Hi! I'm Spend-Bot your personal Finance assistant</span>
+                          </p>
+                        </div>
+                        <div id="userInput">
+                          <input id="textInput" type="text" name="msg" placeholder="Ask me boss!" />
+                        </div>
+                      </div>
+                      <script>
+                        function getBotResponse() {
+                          var rawText = $("#textInput").val();
+                          var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+                          $("#textInput").val("");
+                          $("#chatbox").append(userHtml);
+                          document
+                            .getElementById("userInput");
+                          $.get("/get", { msg: rawText }).done(function(data) {
+                            var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+                            $("#chatbox").append(botHtml);
+                            document
+                              .getElementById("userInput");
+                          });
+                        }
+                        $("#textInput").keypress(function(e) {
+                          if (e.which == 13) {
+                            getBotResponse();
+                          }
+                        });
+                      </script>
+                    </div>
+                  </body>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <br><br><br><br><br>
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          {% block content %}{% endblock %}
+        </div>
+      </div>
+    </main>
+
+    <!-- start footer Area -->
+    <footer class="footer-area area-padding-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-sm-6 single-footer-widget">
+                    <h4>Top Products</h4>
+                    <ul>
+                        <li><a href="#">Managed Expenses</a></li>
+                        <li><a href="#">Monthly Insights</a></li>
+                        <li><a href="#">Yearly Insights</a></li>
+                        <li><a href="#">Financial Recommendation</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-6 single-footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">about</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-6 single-footer-widget">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Brand Assets</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-6 single-footer-widget">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">Research</a></li>
+                        <li><a href="#">Experts</a></li>
+                        <li><a href="#">Agencies</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 single-footer-widget">
+                    <h4>Newsletter</h4>
+                    <p>You can trust us. we only send promo offers,</p>
+                    <div class="form-wrap" id="mc_embed_signup">
+                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                        method="get" class="form-inline">
+                        <input class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'"
+                        required="" type="email" />
+                        <button class="click-btn btn btn-default">
+                            <i class="ti-arrow-right"></i>
+                        </button>
+                        <div style="position: absolute; left: -5000px;">
+                            <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text" />
+                        </div>
+
+                        <div class="info"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row footer-bottom d-flex justify-content-between">
+            <p class="col-lg-8 col-sm-12 footer-text m-0">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+            <div class="col-lg-4 col-sm-12 footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End footer Area -->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+<script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/plots.js') }}"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/plots.js') }}"></script>
+
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/stellar.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/mail-script.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/mail-script.js"></script>
+<script src="js/theme.js"></script>
+</body>
+</html>

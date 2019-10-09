@@ -1,0 +1,41 @@
+{% extends "layouts.html" %}
+{% block content %}
+<h1>Pie Chart For  The Month {{c_month}}</h1>
+<div class="col-md-15">
+<div class="content-section">
+    <div class="row">
+        <div class="col-xs-2">
+            <label>Please Choose the Month</label>
+                <form method=post action="/insight">
+                    {{ (form.month(**{"onchange":"this.form.submit()"})) }}
+                </form>
+        </div>
+        <div class="col-md-15">
+            <div class="chart" id="pieplot">
+                <script>
+                    var graphs = {{plot | safe}};
+                    Plotly.plot('pieplot',graphs,{});
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<h1>Complete Insight Of The Year 2019</h1>
+<div class="col-md-15">
+<div class="content-section">
+    <div class="row">
+        <div class="col-md-15">
+            <div class="chart" id="year_plot">
+                <script>
+                    var graphs = {{y_plot | safe}};
+                    Plotly.plot('year_plot',graphs,{});
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock content%}

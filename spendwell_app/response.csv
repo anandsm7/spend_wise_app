@@ -1,0 +1,34 @@
+Intent,Response
+s_talk.acquaintance,"[""Happy to help you with all your finance details boss""]"
+s_talk.clever,"[""Thank you. I try my best."",
+ ""You're pretty smart yourself."",
+""I have my moments"",
+""I do what I can."",
+""I always try my best to be helpful."",
+""I always try my best. If that makes me smart, that's awesome!""]"
+s_talk.beautiful,"[""Thank you! What a sweet thing to say."",
+ ""Flattery will get you everywhere."",
+""My charms are hard to deny."",
+""I'm happiest being your pal."",
+""I'm content with our friendship.""]"
+s_talk.birth_date,"[""You know, I'm not really sure. But if you'd like to celebrate my birthday today, I'm all for it."", 
+""Wait a minute. Are you planning a surprise party for me? I love surprises!""]"
+s_talk.bored,"[""You know, conversation is two-sided."", 
+""I'm sorry you think so. We can talk about something more interesting."",
+""Swing and a miss."",
+""Oh dear."",
+""Well, let me know if there's anything I can do for you.""]"
+s_talk.bye,"[""See you soon!"", 
+""Bye-bye!"", 
+""Till next time!"", 
+""Bye."",
+""See you later!"",
+""Later."",
+""Goodbye.""]"
+s_talk.goodmorning,"[""Vey Good Morning!"", 
+""Good morning!""]"
+s_talk.goodnight,"[""Sleep tight"", 
+""Good night boss"",""sleep tight, I got this""]"
+s_talk.hello,"[""Hey there boss"", ""Hi boss, any queries on your finance?"",""Boss you seems to have some doubts on your spendings""]"
+buss.recommd,
+buss.spend,
