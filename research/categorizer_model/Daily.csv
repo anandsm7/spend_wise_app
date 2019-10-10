@@ -1,0 +1,312 @@
+Id,Transaction,Category
+1,Bought meals from hotel,food
+2,Purchased snacks and shakes,food
+3,today I bought cool drinks and snacks,food
+4,coffee and fried chips today,food
+5,today I bought biryani,food
+6,"I happened to buy orea biscuits, coffee",food
+7,I had snacks today,food
+8,I bought rice and other vegetablestoday,food
+9,purchased green vegetables,food
+10,bought 1 kg chicken,food
+11,purchased fruits and veggies,food
+12,today i bought meals,food
+13,today i happend to buy vegitables,food
+14,i bought sauce and noodles,food
+15,purchased eggs and milk,food
+16,bought eggs and bread,food
+17,I bought coffee and tea today,food
+18,purchased new groceries today,food
+19,today i went for vegetables shopping,food
+20,i purchased 1 litre milk and meat today,food
+21," today i bought rice, chicken and other items",food
+22,todays food expense for me,food
+23,i bought two meals today,food
+24,total cost of the buying grocery ,food
+25,Today i purchased vegitables,food
+26,i bought ice creams and bread today,food
+27,i went to bakery and bought cakes,food
+28,i bought some stuffs from super market,food
+29,went to hyper market for some food shopping,food
+30,i bought all food from the super market today,food
+31,Today i purchased fresh fruits and vegetables,food
+32,I bought dry fruits and milk today,food
+33,spend on bread and eggs,food
+34,i bought meals today,food
+35,took money to buy fish and meat,food
+36,i bought fish and chips today,food
+37,today i purchased burger and sandwich,food
+38,today i bought a cream biscuits and chips,food
+39,bought all house grocery and bread,food
+40,purchased 1 liter of oil today,food
+41,today i bought 1 kilo of beans and 1 litre of olive oil,food
+42,purchased coconut and vegetbles today,food
+43,bought some cashew nuts and dried fruits,food
+44,my expense for meals,food
+45,today i bought some cookies and milk,food
+46,today amount spent on lunch,food
+47,money spent for dinner,food
+48,i had bread and jam for breakfast,food
+49,order food through uber eats,food
+50,I have ordered my meals swiggy,food
+51,I have ordered from swiggy,food
+52,uber eats food ordered,food
+53,I have ordered burger throught uber eats,food
+54,I had my afternoon lunch,food
+54,I bought meals in the afternoon,food
+55,I had my dinner,food
+56,had my breakfast from hotel,transport
+57,filled petrol,transport
+58,today i filled gas,transport
+59,petrol is filled ,transport
+60,travel expense,transport
+61,today i filled diesel,transport
+62,purchased petrol,transport
+63,today i traveled to kochi,transport
+64,i had to repair the car,transport
+65,went for a drive in the city,transport
+66,i had to fill diesel on my car,transport
+67,went for bike trip,transport
+68,my bike got break down today,transport
+69,i had to travle by bus,transport
+70,i went to the gas station today to fill gas,transport
+71,went for a tour on my bike,transport
+72,bike is not starting,transport
+73,my car got  crashed today,transport
+74,i have to repair my car today,transport
+75,Today my car diesel got empty,transport
+76,i bought 1 litre of petrol today,transport
+77,filled 10 litre of diesel on my car,transport
+78,i travelled to kollam today,transport
+79,i went for ride to waynad,transport
+80,expense for the ride,transport
+81,expense for diesel for car,transport
+82,car repair expenses,transport
+83,i took bus to office,transport
+84,booked air tickets,transport
+85,i went to USA today ,transport
+86,traveled to korea,transport
+87,i just went for a short ride today,transport
+88,i had to put petrol today,transport
+89,today i went to a drive and filled deisel on m car,transport
+90,i just went by bus to office today,transport
+91,Due to rain i had to go by a cab to office,transport
+92,today i went to office by cab,transport
+93,i took an uber to work,transport
+94,uber cost for the day,transport
+95,i went to college by uber,transport
+96,i had to go by uber today,transport
+97,my bike was on repair ,transport
+98,my car break down so i had to go by uber,transport
+99,today i went to kashmir by flight,transport
+100,went to chennai on train,transport
+101,booked two tickets on train,transport
+102,i went office by train today,transport
+103,today i had to go ot office my bus,transport
+104,bus travel expense,transport
+105,I took auto to home,transport
+106,auto expense from home to office,transport
+107,went for a journey on train,transport
+108,i booked flight tickets for the trip,transport
+109,i took uber to office,transport
+110,uber charges,transport
+111,today i had to go to home by bus,transport
+112,filled petrol on my car,transport
+113,i had to fill petrol on bike ,transport
+114,went for a short trip around the state on my bike,transport
+115,i took a car to go to my office due to rain,transport
+116,amount spend on my car repair,transport
+117,my bike is not working so i had to fix it,transport
+118,fixed my bike,transport
+119,petrol charges for today,transport
+120,i just took my car to office because of rain,transport
+121,petrol filled on my car,transport
+122,my car needs a repair,transport
+123,I just went to homw town,transport
+124,amount sent on petrol,transport
+125,gas station amount,transport
+126,parking amount for today,transport
+127,fill gasoline on car,transport
+128,went to gas station and filled gas,transport
+129,I went to fill gas on my car,transport
+130,went for a trip today,transport
+131,expense on my road trip,transport
+132,all expense for my trip to goa,transport
+133,filled gas on my bike,transport
+134,I had to fill petrol on my car today,transport
+135,my trip expense,transport
+136,I have went for a nice trip,transport
+137,my todays pertol expense,transport
+138,gas is filled for my car,transport
+139,I went for a short trip in munnar,transport
+140,this trip was amazing,transport
+141,booked flight for delhi,transport
+142,I had booked train tickets for the trip,transport
+143,second class AC train is booked for,transport
+144,booked sleeper ticket for train,transport
+145,I have repaired my bike last week,transport
+146,filled my car petrol ,transport
+147,petrol is filled in my car,transport
+148,booked bus tickets,transport
+149,flight tickets are booked,transport
+150,booked air tickets,transport
+151,airplane tickets are booked for next week,transport
+152,went gas station to fill gas,transport
+153,gas filling expenses,shopping
+154,I went for a trip and the expense,shopping
+155,went for shoe shopping,shopping
+156,i bought allen solly shirts,shopping
+157,i purchased a pair of jeans and t shirts today,shopping
+158,i went to purchase jackets today,shopping
+159,i purchased a pair of nike shoes ,shopping
+160,the new addidas boots are great,shopping
+161,buy ray ban sunglasses today,shopping
+162,the new pair of pants i bought today,shopping
+163,i really liked the new saree and i bought it,shopping
+164,i purchased the new clothing range today,shopping
+165,i bought a smartphone from amazon,shopping
+166,i just purchased an iphone 8 today,shopping
+167,i bought playstation from flipkart,shopping
+168,the new amazon deal was great and i bought a laptop,shopping
+169,purchased sony camera,shopping
+170,booked playstation from Amazon,shopping
+171,today i bought a smartphone,shopping
+172,expense for the new LED tv,shopping
+173,i bought a LCD tv today,shopping
+174,purchased pair of shoes today,shopping
+175,i purchased shoes shirts jeans today,shopping
+176,for big indian sales i bought smartphones and Laptop,shopping
+177,i bought a computer keyboard and mouse today,shopping
+178,i purchased new pair of rain coats today,shopping
+179,i bought a new novel,shopping
+180,I purchased a watch through flipkart,shopping
+181,today i bought a fridge from online store,shopping
+182,i have bought two pair of jeans and matching shirt today,shopping
+183,purchased a set of uniform for kids,shopping
+184,i bought kids uniform,shopping
+185,i went to clothing shop and bought a pair of trousers,shopping
+186,purchased two sets of trousers and shirts today,shopping
+187,today i went to shoe shopping,shopping
+188,i bought a microwave owen today,shopping
+189,purchased a desktop computer,shopping
+190,i bought a desktop computer with speakers and many more,shopping
+191,i bought a gaming mouse and keyboard,shopping
+192,i purchased an xbox today,shopping
+193,went online a bought few books,shopping
+194,i purchased a book on leraning python today,shopping
+195,i went for book shopping and purchased few,shopping
+196,went for sneaker shopping,shopping
+197,my shopping expenses,shopping
+198,I went to buy a pair of shoes today,shopping
+199,bought a new fridge ,shopping
+200,expense for the new television,shopping
+201,I bought a new camera,shopping
+202,paid in full for the brand new smartphone,shopping
+203,smartphone bought,shopping
+204,I just bought a new pair of shirt and t shirt,shopping
+205,I bought netflix subscription,shopping
+206,netflix got a year,shopping
+207,I purchased amazon prime for a month,shopping
+208,amazon prime account bought,shopping
+209,expense for shopping,shopping
+210,I purchased a new watch,shopping
+211,smartwatch bought,shopping
+212,I purchased a smartwatch,shopping
+213,I just purchased a new samsung phone,shopping
+214,bought a brand new phone,shopping
+215,today I bought a new car,shopping
+216,purchased cloths for marriage,shopping
+217,expense for cloths,shopping
+218,I bought a pair of jeans and top,shopping
+219,I paid for a new sunglasses,shopping
+220,purchased a new macbook pro laptop,shopping
+221,purchased a new set of joysticks,shopping
+222,I bought tickets for movie,shopping
+223,I purchased movie tickets,shopping
+224,I bought new novels,shopping
+225,novels purchased,shopping
+226,I went and purchased some new books,shopping
+227,new books bought,shopping
+228,I just bought a new external hard disk,shopping
+229,new smart watch ,shopping
+230,I just purchase new bags for office,shopping
+231,school bags bought,shopping
+232,made uniform for kids,shopping
+233,purchased ready made uniforms,shopping
+234,bought sports equipments,shopping
+235,sports shoes for jogging,shopping
+236,I purchased hym gloves,shopping
+237,bought gym equipments like dumbells ,shopping
+238,I just bought new movie disc,shopping
+239,purchased speakers,shopping
+240,I just bought a new rain jacket,shopping
+241,purchased stationary,shopping
+242,I bought a colour printer,shopping
+243,inkjet printer bought,shopping
+244,purchased a new headphone,shopping
+245,earphones bought,shopping
+246,I bought a new headphone,shopping
+247,I bought a brand new graphics card for my desktop,shopping
+248,gpu card bought,shopping
+249,bought a new television,shopping
+250,purchase perfume,shopping
+251,todat I bought perfume and cologne,shopping
+252,new cologne bought,shopping
+253,I purchased a new black suit,shopping
+254,grey suits bought,shopping
+255,I purchase a new motorcycle,shopping
+256,bought a new bike,bills
+257,purchase new car,bills
+258,today i paid the house rent,bills
+259,i had to pay the home rent,bills
+260,electricity bill paid,bills
+261,the electricty bill was very high this month,bills
+262,water bill paid,bills
+263,paid my house rent today,bills
+264,my house bill has been fully paid,bills
+265,water authority bill paid,bills
+266,i just paid my mobile prepaid,bills
+267,prepaid bill paid for,bills
+268,i paid my mobile bills today,bills
+269,mobile bill fully paid,bills
+270,my broadband bills are fully paid ,bills
+271,charges for internet broadband is paid,bills
+272,i just paid my house bill today,bills
+273,electricity bill fully paid,bills
+274,my house mortgage are paid,bills
+275,i fully paid my this month house mortgage,bills
+276,mortgage house is paid,bills
+277,emi bills are paid,bills
+278,i paid my emi bills,bills
+279,paid my broadband bills,bills
+280,bills paid,bills
+281,I paid my bill for house rent,bills
+282,house rent fully paid ,bills
+283,I paid my channel subscription rent,bills
+284,bill for insurance policy,bills
+285,my bill for electricity is fully paid,bills
+286,my house rent is paid,bills
+287,I have paid my loan for the month,bills
+288,my emi are all paid,bills
+289,emi for the month is paid,bills
+290,emi is deducted from my account,bills
+291,this month emi for my car is credited to the bank,bills
+292,I have full paid this month emi for the bike,bills
+293,postpaid bill for the mobile is paid,bills
+294,I have paid this month loan ,bills
+295,my taxes are paid for this year,bills
+296,this year tax is paid,bills
+297,paid yearly tax ,bills
+298,I have filed my yearly tax returns,bills
+299,I have full paid for this year car insurance,bills
+300,I have paid my loan for this month,bills
+301,bill amount for telephone is fully paid,bills
+302,I had paid my monthly channel subscription for the month,bills
+303,paid the house rent,bills
+304,my insurance premium  for this month is paid,bills
+305,I have to pay my yearly tax returns,bills
+306,electricty bill paid,bills
+307,I have paid my water bills for this month,bills
+308,water authority bill is paid,bills
+309,current bill for the month is paid,bills
+310,my electricty bills are paid,bills
